@@ -1,0 +1,216 @@
+$primaryColor: #FFAB91;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@mixin flexCenter($justify, $direction, $align) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    @include flexCenter(center, row, flex-start);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+}
+
+aside {
+    background-color: $primaryColor;
+    width: 300px;
+    min-height: 110vh;
+    display: table-cell;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    >.aside-content {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h3 {
+        height: 30px;
+        padding: 5px 0;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #fff;
+        color: $primaryColor;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    i {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    img {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        border: 3px solid rgb(255, 151, 119);
+    }
+
+    .picture {
+        text-align: center;
+    }
+
+    .picture,
+    .infos-content,
+    .about-content,
+    .hobbis-content {
+        padding: 10px 40px;
+    }
+
+    .info {
+        font-style: italic;
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    .hobbis-content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+}
+
+
+section {
+    background-color: #fff;
+    width: 700px;
+    min-height: 110vh;
+    display: table-cell;
+    padding: 40px;
+
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 500;
+
+        .title-name {
+            color: $primaryColor;
+        }
+    }
+
+    #job-title {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    hr {
+        border: 1px solid $primaryColor;
+    }
+
+    #hr-title {
+        display: inline-block;
+        width: 50px;
+        padding: 0;
+        margin: 0 0 70px 0;
+        text-align: left;
+    }
+
+    .main-title {
+        @include flexCenter(flex-start, row, center);
+
+        i {
+            margin: 0 0 0 5px;
+            font-size: 30px;
+            color: $primaryColor;
+        }
+
+        h2 {
+            margin: 0 0 0 20px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
+
+    .diploma,
+    .experience {
+        @include flexCenter(flex-start, row, flex-start);
+        margin: 20px 0 20px 0;
+
+        &-content {
+            margin-left: 60px;
+
+            p {
+                margin-top: 0;
+            }
+        }
+
+        h3 {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        &-school,
+        &-firm {
+            margin: 0 0 5px 0;
+            font-style: italic;
+        }
+
+        i {
+            margin: 10px 20px 0 20px;
+            font-size: 10px;
+            color: $primaryColor;
+        }
+
+        &-dates p {
+            margin: 0;
+        }
+
+    }
+
+    .reference {
+        @include flexCenter(space-around, row, flex-start);
+        text-align: center;
+
+        p:not(:first-child) {
+            margin: 0;
+        }
+
+        &-name {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        &-firm {
+            font-style: italic;
+        }
+    }
+}
