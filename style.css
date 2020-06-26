@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 body {
   margin: 0;
-  padding: 10px;
-  background-color: black;
+  padding: 30px;
+  background-color: #ffe0d61a;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 15px;
+  }
 }
 
 * {
@@ -16,18 +21,38 @@ main {
   justify-content: center;
   flex-direction: row;
   align-items: flex-start;
-  width: 70%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
   display: table;
   overflow: hidden;
-  position: absolute;
-  width: 100%;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px #7a7a7a47;
+}
+@media screen and (max-width: 1300px) {
+  main {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+  }
 }
 
 aside {
   background-color: #FFAB91;
-  width: 300px;
+  width: 30%;
   min-height: 110vh;
   display: table-cell;
   height: 100%;
@@ -35,12 +60,26 @@ aside {
   left: 0;
   top: 0;
 }
+@media screen and (max-width: 1300px) {
+  aside {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 650px) {
+  aside {
+    position: relative;
+    width: 100%;
+  }
+}
 aside > .aside-content {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+aside .aside-content__top {
+  width: 100%;
 }
 aside h3 {
   height: 30px;
@@ -61,6 +100,7 @@ aside a {
 aside i {
   font-size: 30px;
   color: #fff;
+  margin: 10px 5px 0 5px;
 }
 aside img {
   width: 150px;
@@ -70,6 +110,7 @@ aside img {
 }
 aside .picture {
   text-align: center;
+  margin-top: 10px;
 }
 aside .picture,
 aside .infos-content,
@@ -82,6 +123,11 @@ aside .info {
   margin-top: 10px;
   font-weight: 500;
 }
+@media screen and (max-width: 650px) {
+  aside .infos-content {
+    text-align: center;
+  }
+}
 aside .hobbis-content {
   display: flex;
   justify-content: space-evenly;
@@ -89,12 +135,21 @@ aside .hobbis-content {
   margin-bottom: 10px;
 }
 
+.aside-substitute {
+  width: 220px;
+}
+
 section {
   background-color: #fff;
-  width: 700px;
-  min-height: 110vh;
+  width: 70%;
   display: table-cell;
   padding: 40px;
+}
+@media screen and (max-width: 650px) {
+  section {
+    position: relative;
+    width: 100%;
+  }
 }
 section h1 {
   margin: 0;
@@ -102,8 +157,9 @@ section h1 {
   font-size: 40px;
   font-weight: 500;
 }
-section h1 .title-name {
+section h1 mark {
   color: #FFAB91;
+  background-color: transparent;
 }
 section #job-title {
   margin: 0;
@@ -144,9 +200,15 @@ section .experience {
   align-items: flex-start;
   margin: 20px 0 20px 0;
 }
+@media screen and (max-width: 1170px) {
+  section .diploma,
+section .experience {
+    flex-wrap: wrap;
+  }
+}
 section .diploma-content,
 section .experience-content {
-  margin-left: 60px;
+  margin-left: 10px;
 }
 section .diploma-content p,
 section .experience-content p {
@@ -170,9 +232,13 @@ section .experience i {
   font-size: 10px;
   color: #FFAB91;
 }
+section .diploma-dates,
+section .experience-dates {
+  margin-bottom: 20px;
+}
 section .diploma-dates p,
 section .experience-dates p {
-  margin: 0;
+  margin: 0 50px 0px 0;
 }
 section .reference {
   display: flex;
@@ -180,6 +246,22 @@ section .reference {
   flex-direction: row;
   align-items: flex-start;
   text-align: center;
+}
+@media (min-width: 650px) and (max-width: 850px) {
+  section .reference {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  section .reference {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 section .reference p:not(:first-child) {
   margin: 0;

@@ -1,4 +1,4 @@
-$primaryColor: #FFAB91;
+@import "./variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 @mixin flexCenter($justify, $direction, $align) {
@@ -10,10 +10,14 @@ $primaryColor: #FFAB91;
 
 body {
     margin: 0;
-    padding: 10px;
-    background-color: black;
+    padding: 30px;
+    background-color: #ffe0d61a;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+
+    @media screen and (max-width: $medium) {
+        padding: 15px;
+    }
 }
 
 * {
@@ -22,19 +26,33 @@ body {
 
 main {
     @include flexCenter(center, row, flex-start);
-    width: 70%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     display: table;
     overflow: hidden;
-    position: absolute;
-    width: 100%;
+    position: relative;
+    background-color: $secondaryColor;
+    box-shadow: 0px 0px 20px 0px #7a7a7a47;
+
+    @media screen and (max-width: $x-large) {
+        width: 75%;
+    }
+
+    @media screen and (max-width: $medium) {
+        width: 90%;
+    }
+
+    @media screen and (max-width: $small) {
+        @include flexCenter(flex-start, column, center);
+        box-shadow: none;
+    }
 
 }
 
 aside {
     background-color: $primaryColor;
-    width: 300px;
+    width: 30%;
     min-height: 110vh;
     display: table-cell;
     height: 100%;
@@ -42,12 +60,27 @@ aside {
     left: 0;
     top: 0;
 
+    @media screen and (max-width: $x-large) {
+        width: 220px;
+    }
+
+    @media screen and (max-width: $small) {
+        position: relative;
+        width: 100%;
+    }
+
     >.aside-content {
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+
+
+    }
+
+    .aside-content__top {
+        width: 100%;
     }
 
     h3 {
@@ -56,7 +89,7 @@ aside {
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
-        background-color: #fff;
+        background-color: $secondaryColor;
         color: $primaryColor;
     }
 
@@ -71,7 +104,8 @@ aside {
 
     i {
         font-size: 30px;
-        color: #fff;
+        color: $secondaryColor;
+        margin: 10px 5px 0 5px;
     }
 
     img {
@@ -83,6 +117,7 @@ aside {
 
     .picture {
         text-align: center;
+        margin-top: 10px;
     }
 
     .picture,
@@ -98,21 +133,36 @@ aside {
         font-weight: 500;
     }
 
+    .infos-content {
+        @media screen and (max-width: $small) {
+            text-align: center;
+        }
+    }
+
     .hobbis-content {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
+
+}
+
+.aside-substitute {
+    width: 220px;
 }
 
 
 section {
-    background-color: #fff;
-    width: 700px;
-    min-height: 110vh;
+    background-color: $secondaryColor;
+    width: 70%;
     display: table-cell;
     padding: 40px;
+
+    @media screen and (max-width: $small) {
+        position: relative;
+        width: 100%;
+    }
 
     h1 {
         margin: 0;
@@ -120,8 +170,9 @@ section {
         font-size: 40px;
         font-weight: 500;
 
-        .title-name {
+        mark {
             color: $primaryColor;
+            background-color: transparent;
         }
     }
 
@@ -164,8 +215,12 @@ section {
         @include flexCenter(flex-start, row, flex-start);
         margin: 20px 0 20px 0;
 
+        @media screen and (max-width: $large) {
+            flex-wrap: wrap;
+        }
+
         &-content {
-            margin-left: 60px;
+            margin-left: 10px;
 
             p {
                 margin-top: 0;
@@ -190,15 +245,28 @@ section {
             color: $primaryColor;
         }
 
-        &-dates p {
-            margin: 0;
-        }
+        &-dates {
+            margin-bottom: 20px;
 
+            p {
+                margin: 0 50px 0px 0;
+            }
+        }
     }
 
     .reference {
         @include flexCenter(space-around, row, flex-start);
         text-align: center;
+
+        @media (min-width:$small) and (max-width: $small + 200) {
+            @include flexCenter(flex-start, column, center);
+        }
+
+        @media screen and (max-width: $small - 100) {
+            @include flexCenter(flex-start, column, center);
+        }
+
+
 
         p:not(:first-child) {
             margin: 0;
