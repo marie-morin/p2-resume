@@ -78,7 +78,7 @@ aside > .aside-content {
   align-items: center;
   flex-direction: column;
 }
-aside .aside-content__top {
+aside .aside-content__part {
   width: 100%;
 }
 aside h3 {
