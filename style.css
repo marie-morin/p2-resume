@@ -2,9 +2,9 @@
 body {
   margin: 0;
   padding: 30px;
-  background-color: #ffe0d61a;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  background-color: #ffe0d61a;
 }
 @media screen and (max-width: 1024px) {
   body {
@@ -18,15 +18,15 @@ body {
 
 main {
   display: flex;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
+  position: relative;
+  display: table;
   width: 65%;
+  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  display: table;
-  overflow: hidden;
-  position: relative;
   background-color: #fff;
   box-shadow: 0px 0px 20px 0px #7a7a7a47;
 }
@@ -43,22 +43,21 @@ main {
 @media screen and (max-width: 650px) {
   main {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: none;
   }
 }
 
 aside {
-  background-color: #FFAB91;
-  width: 30%;
-  min-height: 110vh;
-  display: table-cell;
-  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  display: table-cell;
+  width: 30%;
+  height: 100%;
+  background-color: #FFAB91;
 }
 @media screen and (max-width: 1300px) {
   aside {
@@ -72,11 +71,12 @@ aside {
   }
 }
 aside > .aside-content {
-  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  display: flex;
+  height: 100%;
 }
 aside .aside-content__part {
   width: 100%;
@@ -84,11 +84,11 @@ aside .aside-content__part {
 aside h3 {
   height: 30px;
   padding: 5px 0;
-  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  background-color: #fff;
+  font-weight: 400;
   color: #FFAB91;
+  background-color: #fff;
 }
 aside p {
   margin: 0;
@@ -98,9 +98,9 @@ aside a {
   color: black;
 }
 aside i {
+  margin: 10px 5px 0 5px;
   font-size: 30px;
   color: #fff;
-  margin: 10px 5px 0 5px;
 }
 aside img {
   width: 150px;
@@ -109,8 +109,8 @@ aside img {
   border: 3px solid #ff9777;
 }
 aside .picture {
-  text-align: center;
   margin-top: 10px;
+  text-align: center;
 }
 aside .picture,
 aside .infos-content,
@@ -119,8 +119,8 @@ aside .hobbis-content {
   padding: 10px 40px;
 }
 aside .info {
-  font-style: italic;
   margin-top: 10px;
+  font-style: italic;
   font-weight: 500;
 }
 @media screen and (max-width: 650px) {
@@ -130,7 +130,9 @@ aside .info {
 }
 aside .hobbis-content {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
@@ -140,10 +142,10 @@ aside .hobbis-content {
 }
 
 section {
-  background-color: #fff;
-  width: 70%;
   display: table-cell;
+  width: 70%;
   padding: 40px;
+  background-color: #fff;
 }
 @media screen and (max-width: 650px) {
   section {
@@ -172,14 +174,14 @@ section hr {
 section #hr-title {
   display: inline-block;
   width: 50px;
-  padding: 0;
   margin: 0 0 70px 0;
+  padding: 0;
   text-align: left;
 }
 section .main-title {
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 section .main-title i {
@@ -195,16 +197,22 @@ section .main-title h2 {
 section .diploma,
 section .experience {
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-start;
   margin: 20px 0 20px 0;
 }
-@media screen and (max-width: 1170px) {
-  section .diploma,
-section .experience {
-    flex-wrap: wrap;
-  }
+section .diploma h3,
+section .experience h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+section .diploma i,
+section .experience i {
+  margin: 10px 20px 0 20px;
+  font-size: 10px;
+  color: #FFAB91;
 }
 section .diploma-content,
 section .experience-content {
@@ -214,24 +222,6 @@ section .diploma-content p,
 section .experience-content p {
   margin-top: 0;
 }
-section .diploma h3,
-section .experience h3 {
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-section .diploma-school, section .diploma-firm,
-section .experience-school,
-section .experience-firm {
-  margin: 0 0 5px 0;
-  font-style: italic;
-}
-section .diploma i,
-section .experience i {
-  margin: 10px 20px 0 20px;
-  font-size: 10px;
-  color: #FFAB91;
-}
 section .diploma-dates,
 section .experience-dates {
   margin-bottom: 20px;
@@ -240,28 +230,24 @@ section .diploma-dates p,
 section .experience-dates p {
   margin: 0 50px 0px 0;
 }
+section .diploma-school, section .diploma-firm,
+section .experience-school,
+section .experience-firm {
+  margin: 0 0 5px 0;
+  font-style: italic;
+}
+@media screen and (max-width: 1170px) {
+  section .diploma,
+section .experience {
+    flex-wrap: wrap;
+  }
+}
 section .reference {
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
+  justify-content: space-around;
   align-items: flex-start;
   text-align: center;
-}
-@media (min-width: 650px) and (max-width: 850px) {
-  section .reference {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 550px) {
-  section .reference {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 section .reference p:not(:first-child) {
   margin: 0;
@@ -272,6 +258,22 @@ section .reference-name {
 }
 section .reference-firm {
   font-style: italic;
+}
+@media (min-width: 650px) and (max-width: 850px) {
+  section .reference {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  section .reference {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

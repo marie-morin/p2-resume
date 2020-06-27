@@ -34,10 +34,10 @@ body {
 }
 
 main {
-    @include flexCenter(center, row, flex-start);
-    position: relative;
-    display: table;
     width: 65%;
+    position: relative;
+    @include flexCenter(center, row, flex-start);
+    display: table;
     overflow: hidden;
 
     margin-left: auto;
@@ -65,12 +65,12 @@ main {
 
 //--------------------------------GENERAL
 aside {
+    width: 30%;
+    height: 100%;
+    display: table-cell;
     position: absolute;
     left: 0;
     top: 0;
-    display: table-cell;
-    width: 30%;
-    height: 100%;
     background-color: $primaryColor;
 
     @media screen and (max-width: $x-large) {
@@ -78,14 +78,13 @@ aside {
     }
 
     @media screen and (max-width: $small) {
-        position: relative;
         width: 100%;
+        position: relative;
     }
 
     >.aside-content {
-        @include flexCenter(space-between, column, center);
-        display: flex;
         height: 100%;
+        @include flexCenter(space-between, column, center);
     }
 
     .aside-content__part {
@@ -168,14 +167,14 @@ aside {
 
 //--------------------------------SECTION
 section {
-    display: table-cell;
     width: 70%;
+    display: table-cell;
     padding: 40px;
     background-color: $secondaryColor;
 
     @media screen and (max-width: $small) {
-        position: relative;
         width: 100%;
+        position: relative;
     }
 
 
@@ -205,8 +204,8 @@ section {
     }
 
     #hr-title {
-        display: inline-block;
         width: 50px;
+        display: inline-block;
         margin: 0 0 70px 0;
         padding: 0;
         text-align: left;
