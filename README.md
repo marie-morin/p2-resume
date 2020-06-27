@@ -1,16 +1,15 @@
-# Curriculum Vitea OpenClassRooms (p2)
+# OpenClassRooms Web Developer Resume(p2)
 
-Ce projet à été réalisé dans le cadre du projet 2 de la formation Développeur Web d'OpenClassRooms.
-L'objectif était de transformer un CV classique de Développeur Web Franlance en CV numérique sur une page web.
 
-Une maquette à été fournie, seule les couleurs et icons étaient laissé un choix du candidat, en utilisant Material Design et Font Awesome.
-Le contenu du CV était laissé libre au candidat, mais devait comporter un minimum de personnalisation, particulièrement dans la section "A propos".
-Le projet devait être réalisé entièrement en HTML et CSS, sans framework. L'utilisation de FlexBox était conseillée. La page devait être entièrement responsive.
-Le projet devait être hébergé sur GitHub Pages.
+This project was brought as part of project 2 of the OpenClassRooms Web Developer training.
+The objective was to go from a classic Freelance Web Developer CV to a CV on a web page.
 
-La projet utilise :
+A model was provided, only the colors and icons were left to the choice of the candidate, using respectively Material Design and Font Awesome respectively.
+The content of the CV was left free to the candidate, but should include a minimum of personalization, particularly in the "About" section.
+The project had to be code exclusivly in HTML and CSS, without the use of frameworks. FlexBox was advised. The page had to be fully responsive.
+The project was to be hosted on GitHub Pages.
 
+The project uses:
 - HTML5
 - CSS3
 - SASS
-
