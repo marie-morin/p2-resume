@@ -188,9 +188,10 @@ section .main-title i {
   font-size: 30px;
   color: #FFAB91;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 420px) {
   section .main-title i {
-    font-size: 20px;
+    font-size: 14px;
+    margin: 0;
   }
 }
 section .main-title h2 {
@@ -198,9 +199,10 @@ section .main-title h2 {
   text-transform: uppercase;
   font-weight: 400;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 420px) {
   section .main-title h2 {
-    font-size: 20px;
+    font-size: 14px;
+    margin: 0 0 0 5px;
   }
 }
 section .diploma,

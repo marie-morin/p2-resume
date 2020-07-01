@@ -219,8 +219,9 @@ section {
             font-size: 30px;
             color: $primaryColor;
 
-            @media screen and (max-width: $small) {
-                font-size: 20px;
+            @media screen and (max-width: $x-small + 100) {
+                font-size: 14px;
+                margin: 0;
             }
         }
 
@@ -229,8 +230,9 @@ section {
             text-transform: uppercase;
             font-weight: 400;
 
-            @media screen and (max-width: $small) {
-                font-size: 20px;
+            @media screen and (max-width: $x-small + 100) {
+                font-size: 14px;
+                margin: 0 0 0 5px;
             }
         }
     }
