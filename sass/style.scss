@@ -218,12 +218,20 @@ section {
             margin: 0 0 0 5px;
             font-size: 30px;
             color: $primaryColor;
+
+            @media screen and (max-width: $small) {
+                font-size: 20px;
+            }
         }
 
         h2 {
             margin: 0 0 0 20px;
             text-transform: uppercase;
             font-weight: 400;
+
+            @media screen and (max-width: $small) {
+                font-size: 20px;
+            }
         }
     }
 

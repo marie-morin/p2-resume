@@ -17,13 +17,13 @@ body {
 }
 
 main {
+  width: 65%;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  position: relative;
   display: table;
-  width: 65%;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -51,12 +51,12 @@ main {
 }
 
 aside {
+  width: 30%;
+  height: 100%;
+  display: table-cell;
   position: absolute;
   left: 0;
   top: 0;
-  display: table-cell;
-  width: 30%;
-  height: 100%;
   background-color: #FFAB91;
 }
 @media screen and (max-width: 1300px) {
@@ -66,17 +66,16 @@ aside {
 }
 @media screen and (max-width: 650px) {
   aside {
-    position: relative;
     width: 100%;
+    position: relative;
   }
 }
 aside > .aside-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  display: flex;
-  height: 100%;
 }
 aside .aside-content__part {
   width: 100%;
@@ -142,15 +141,15 @@ aside .hobbis-content {
 }
 
 section {
-  display: table-cell;
   width: 70%;
+  display: table-cell;
   padding: 40px;
   background-color: #fff;
 }
 @media screen and (max-width: 650px) {
   section {
-    position: relative;
     width: 100%;
+    position: relative;
   }
 }
 section h1 {
@@ -172,8 +171,8 @@ section hr {
   border: 1px solid #FFAB91;
 }
 section #hr-title {
-  display: inline-block;
   width: 50px;
+  display: inline-block;
   margin: 0 0 70px 0;
   padding: 0;
   text-align: left;
@@ -189,10 +188,20 @@ section .main-title i {
   font-size: 30px;
   color: #FFAB91;
 }
+@media screen and (max-width: 650px) {
+  section .main-title i {
+    font-size: 20px;
+  }
+}
 section .main-title h2 {
   margin: 0 0 0 20px;
   text-transform: uppercase;
   font-weight: 400;
+}
+@media screen and (max-width: 650px) {
+  section .main-title h2 {
+    font-size: 20px;
+  }
 }
 section .diploma,
 section .experience {
