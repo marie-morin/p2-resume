@@ -43,7 +43,7 @@ body {
 @media screen and (max-width: 650px) {
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
     box-shadow: none;
@@ -101,15 +101,20 @@ aside i {
   font-size: 30px;
   color: #fff;
 }
-aside img {
+aside .picture {
+  margin-top: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  aside .picture {
+    display: none;
+  }
+}
+aside .picture img {
   width: 150px;
   height: auto;
   border-radius: 50%;
   border: 3px solid #ff9777;
-}
-aside .picture {
-  margin-top: 10px;
-  text-align: center;
 }
 aside .picture,
 aside .adress-content,
@@ -177,6 +182,11 @@ main #hr-title {
   padding: 0;
   text-align: left;
 }
+@media screen and (max-width: 650px) {
+  main #hr-title {
+    margin-bottom: 30px;
+  }
+}
 main .main-title {
   display: flex;
   flex-direction: row;
@@ -204,6 +214,22 @@ main .main-title h2 {
     font-size: 14px;
     margin: 0 0 0 5px;
   }
+}
+main .responsive-picture {
+  display: none;
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  main .responsive-picture {
+    display: block;
+  }
+}
+main .responsive-picture img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #ff9777;
 }
 main .diploma,
 main .experience {

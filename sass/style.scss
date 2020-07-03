@@ -55,7 +55,7 @@ body {
     }
 
     @media screen and (max-width: $small) {
-        @include flexCenter(flex-start, column, center);
+        @include flexCenter(flex-start, column-reverse, center);
         box-shadow: none;
     }
 }
@@ -116,16 +116,20 @@ aside {
         color: $secondaryColor;
     }
 
-    img {
-        width: 150px;
-        height: auto;
-        border-radius: 50%;
-        border: 3px solid rgb(255, 151, 119);
-    }
-
     .picture {
         margin-top: 10px;
         text-align: center;
+
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid rgb(255, 151, 119);
+        }
     }
 
     .picture,
@@ -157,6 +161,8 @@ aside {
 
 
 
+
+
 //--------------------------------SUBSTITUTE
 .aside-substitute {
     width: 220px;
@@ -176,7 +182,6 @@ main {
         width: 100%;
         position: relative;
     }
-
 
 
 
@@ -209,6 +214,10 @@ main {
         margin: 0 0 70px 0;
         padding: 0;
         text-align: left;
+
+        @media screen and (max-width: $small) {
+            margin-bottom: 30px;
+        }
     }
 
     .main-title {
@@ -237,6 +246,23 @@ main {
         }
     }
 
+
+    .responsive-picture {
+        display: none;
+        margin-bottom: 30px;
+        text-align: center;
+
+        @media screen and (max-width: $small) {
+            display: block;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid rgb(255, 151, 119);
+        }
+    }
 
 
 
