@@ -57,6 +57,7 @@ body {
     @media screen and (max-width: $small) {
         @include flexCenter(flex-start, column-reverse, center);
         box-shadow: none;
+        text-align: center;
     }
 }
 
@@ -112,8 +113,11 @@ aside {
 
     i {
         margin: 10px 5px 0 5px;
-        font-size: 30px;
+        padding: 10px;
+        font-size: 25px;
         color: $secondaryColor;
+        border: 3px solid $secondaryColor;
+        border-radius: 50%;
     }
 
     .picture {
@@ -152,9 +156,10 @@ aside {
     }
 
     .hobbis-content {
-        @include flexCenter(space-between, row, flex-start);
+        @include flexCenter(center, row, flex-start);
         flex-wrap: wrap;
         margin-bottom: 10px;
+        padding: 0;
     }
 }
 
@@ -192,6 +197,10 @@ main {
         font-size: 40px;
         font-weight: 500;
 
+        @media screen and (max-width: $small) {
+            font-size: 20px;
+        }
+
         mark {
             color: $primaryColor;
             background-color: transparent;
@@ -223,14 +232,17 @@ main {
     .main-title {
         @include flexCenter(flex-start, row, center);
 
+        @media screen and (max-width: $small) {
+            @include flexCenter(center, column, center);
+        }
+
         i {
             margin: 0 0 0 5px;
-            font-size: 30px;
+            font-size: 25px;
             color: $primaryColor;
 
-            @media screen and (max-width: $x-small + 100) {
-                font-size: 14px;
-                margin: 0;
+            @media screen and (max-width: $small) {
+                margin: auto;
             }
         }
 
@@ -239,9 +251,9 @@ main {
             text-transform: uppercase;
             font-weight: 400;
 
-            @media screen and (max-width: $x-small + 100) {
-                font-size: 14px;
-                margin: 0 0 0 5px;
+            @media screen and (max-width: $small) {
+                margin: 5px 0 0 0;
+                font-size: 15px;
             }
         }
     }
@@ -295,8 +307,16 @@ main {
         &-dates {
             margin-bottom: 20px;
 
+            @media screen and (max-width: $small) {
+                padding-top: 10px;
+            }
+
             p {
                 margin: 0 50px 0px 0;
+
+                @media screen and (max-width: $small) {
+                    margin: auto;
+                }
             }
         }
 
@@ -306,8 +326,8 @@ main {
             font-style: italic;
         }
 
-        @media screen and (max-width: $large) {
-            flex-wrap: wrap;
+        @media screen and (max-width: $small) {
+            @include flexCenter(flex-start, column, center);
         }
     }
 

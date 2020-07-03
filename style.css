@@ -47,6 +47,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     box-shadow: none;
+    text-align: center;
   }
 }
 
@@ -98,8 +99,11 @@ aside a {
 }
 aside i {
   margin: 10px 5px 0 5px;
-  font-size: 30px;
+  padding: 10px;
+  font-size: 25px;
   color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50%;
 }
 aside .picture {
   margin-top: 10px;
@@ -135,10 +139,11 @@ aside .info {
 aside .hobbis-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  padding: 0;
 }
 
 .aside-substitute {
@@ -162,6 +167,11 @@ main h1 {
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 500;
+}
+@media screen and (max-width: 650px) {
+  main h1 {
+    font-size: 20px;
+  }
 }
 main h1 mark {
   color: #FFAB91;
@@ -193,15 +203,22 @@ main .main-title {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (max-width: 650px) {
+  main .main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 main .main-title i {
   margin: 0 0 0 5px;
-  font-size: 30px;
+  font-size: 25px;
   color: #FFAB91;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 650px) {
   main .main-title i {
-    font-size: 14px;
-    margin: 0;
+    margin: auto;
   }
 }
 main .main-title h2 {
@@ -209,10 +226,10 @@ main .main-title h2 {
   text-transform: uppercase;
   font-weight: 400;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 650px) {
   main .main-title h2 {
-    font-size: 14px;
-    margin: 0 0 0 5px;
+    margin: 5px 0 0 0;
+    font-size: 15px;
   }
 }
 main .responsive-picture {
@@ -263,9 +280,21 @@ main .diploma-dates,
 main .experience-dates {
   margin-bottom: 20px;
 }
+@media screen and (max-width: 650px) {
+  main .diploma-dates,
+main .experience-dates {
+    padding-top: 10px;
+  }
+}
 main .diploma-dates p,
 main .experience-dates p {
   margin: 0 50px 0px 0;
+}
+@media screen and (max-width: 650px) {
+  main .diploma-dates p,
+main .experience-dates p {
+    margin: auto;
+  }
 }
 main .diploma-school, main .diploma-firm,
 main .experience-school,
@@ -273,10 +302,13 @@ main .experience-firm {
   margin: 0 0 5px 0;
   font-style: italic;
 }
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 650px) {
   main .diploma,
 main .experience {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 main .reference {
