@@ -33,7 +33,7 @@ body {
     box-sizing: border-box;
 }
 
-main {
+.container {
     width: 65%;
     position: relative;
     @include flexCenter(center, row, flex-start);
@@ -129,7 +129,7 @@ aside {
     }
 
     .picture,
-    .infos-content,
+    .adress-content,
     .about-content,
     .hobbis-content {
         padding: 10px 40px;
@@ -141,7 +141,7 @@ aside {
         font-weight: 500;
     }
 
-    .infos-content {
+    .adress-content {
         @media screen and (max-width: $small) {
             text-align: center;
         }
@@ -166,7 +166,7 @@ aside {
 
 
 //--------------------------------SECTION
-section {
+main {
     width: 70%;
     display: table-cell;
     padding: 40px;

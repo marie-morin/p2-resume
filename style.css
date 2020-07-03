@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
 }
 
-main {
+.container {
   width: 65%;
   position: relative;
   display: flex;
@@ -31,17 +31,17 @@ main {
   box-shadow: 0px 0px 20px 0px #7a7a7a47;
 }
 @media screen and (max-width: 1300px) {
-  main {
+  .container {
     width: 75%;
   }
 }
 @media screen and (max-width: 1024px) {
-  main {
+  .container {
     width: 90%;
   }
 }
 @media screen and (max-width: 650px) {
-  main {
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -112,7 +112,7 @@ aside .picture {
   text-align: center;
 }
 aside .picture,
-aside .infos-content,
+aside .adress-content,
 aside .about-content,
 aside .hobbis-content {
   padding: 10px 40px;
@@ -123,7 +123,7 @@ aside .info {
   font-weight: 500;
 }
 @media screen and (max-width: 650px) {
-  aside .infos-content {
+  aside .adress-content {
     text-align: center;
   }
 }
@@ -140,138 +140,138 @@ aside .hobbis-content {
   width: 220px;
 }
 
-section {
+main {
   width: 70%;
   display: table-cell;
   padding: 40px;
   background-color: #fff;
 }
 @media screen and (max-width: 650px) {
-  section {
+  main {
     width: 100%;
     position: relative;
   }
 }
-section h1 {
+main h1 {
   margin: 0;
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 500;
 }
-section h1 mark {
+main h1 mark {
   color: #FFAB91;
   background-color: transparent;
 }
-section #job-title {
+main #job-title {
   margin: 0;
   font-size: 15px;
   font-weight: 600;
 }
-section hr {
+main hr {
   border: 1px solid #FFAB91;
 }
-section #hr-title {
+main #hr-title {
   width: 50px;
   display: inline-block;
   margin: 0 0 70px 0;
   padding: 0;
   text-align: left;
 }
-section .main-title {
+main .main-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-section .main-title i {
+main .main-title i {
   margin: 0 0 0 5px;
   font-size: 30px;
   color: #FFAB91;
 }
 @media screen and (max-width: 420px) {
-  section .main-title i {
+  main .main-title i {
     font-size: 14px;
     margin: 0;
   }
 }
-section .main-title h2 {
+main .main-title h2 {
   margin: 0 0 0 20px;
   text-transform: uppercase;
   font-weight: 400;
 }
 @media screen and (max-width: 420px) {
-  section .main-title h2 {
+  main .main-title h2 {
     font-size: 14px;
     margin: 0 0 0 5px;
   }
 }
-section .diploma,
-section .experience {
+main .diploma,
+main .experience {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   margin: 20px 0 20px 0;
 }
-section .diploma h3,
-section .experience h3 {
+main .diploma h3,
+main .experience h3 {
   margin: 0;
   text-transform: uppercase;
   font-weight: 500;
 }
-section .diploma i,
-section .experience i {
+main .diploma i,
+main .experience i {
   margin: 10px 20px 0 20px;
   font-size: 10px;
   color: #FFAB91;
 }
-section .diploma-content,
-section .experience-content {
+main .diploma-content,
+main .experience-content {
   margin-left: 10px;
 }
-section .diploma-content p,
-section .experience-content p {
+main .diploma-content p,
+main .experience-content p {
   margin-top: 0;
 }
-section .diploma-dates,
-section .experience-dates {
+main .diploma-dates,
+main .experience-dates {
   margin-bottom: 20px;
 }
-section .diploma-dates p,
-section .experience-dates p {
+main .diploma-dates p,
+main .experience-dates p {
   margin: 0 50px 0px 0;
 }
-section .diploma-school, section .diploma-firm,
-section .experience-school,
-section .experience-firm {
+main .diploma-school, main .diploma-firm,
+main .experience-school,
+main .experience-firm {
   margin: 0 0 5px 0;
   font-style: italic;
 }
 @media screen and (max-width: 1170px) {
-  section .diploma,
-section .experience {
+  main .diploma,
+main .experience {
     flex-wrap: wrap;
   }
 }
-section .reference {
+main .reference {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
   text-align: center;
 }
-section .reference p:not(:first-child) {
+main .reference p:not(:first-child) {
   margin: 0;
 }
-section .reference-name {
+main .reference-name {
   text-transform: uppercase;
   font-weight: 600;
 }
-section .reference-firm {
+main .reference-firm {
   font-style: italic;
 }
 @media (min-width: 650px) and (max-width: 850px) {
-  section .reference {
+  main .reference {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -279,7 +279,7 @@ section .reference-firm {
   }
 }
 @media screen and (max-width: 550px) {
-  section .reference {
+  main .reference {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
