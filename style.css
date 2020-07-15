@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-
 body {
   margin: 0;
   padding: 30px;
@@ -7,7 +6,6 @@ body {
   font-size: 14px;
   background-color: #ffe0d61a;
 }
-
 @media screen and (max-width: 1024px) {
   body {
     padding: 15px;
@@ -32,19 +30,16 @@ body {
   background-color: #fff;
   box-shadow: 0px 0px 20px 0px #7a7a7a47;
 }
-
 @media screen and (max-width: 1300px) {
   .container {
     width: 75%;
   }
 }
-
 @media screen and (max-width: 1024px) {
   .container {
     width: 90%;
   }
 }
-
 @media screen and (max-width: 650px) {
   .container {
     display: flex;
@@ -65,32 +60,27 @@ aside {
   top: 0;
   background-color: #FFAB91;
 }
-
 @media screen and (max-width: 1300px) {
   aside {
     width: 220px;
   }
 }
-
 @media screen and (max-width: 650px) {
   aside {
     width: 100%;
     position: relative;
   }
 }
-
-aside>.aside-content {
+aside > .aside-content {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-
 aside .aside-content__part {
   width: 100%;
 }
-
 aside h3 {
   height: 30px;
   padding: 5px 0;
@@ -100,16 +90,13 @@ aside h3 {
   color: #FFAB91;
   background-color: #fff;
 }
-
 aside p {
   margin: 0;
 }
-
 aside a {
   text-decoration: none;
   color: black;
 }
-
 aside i {
   margin: 10px 5px 0 5px;
   padding: 10px;
@@ -118,44 +105,37 @@ aside i {
   border: 3px solid #fff;
   border-radius: 50%;
 }
-
 aside .picture {
   margin-top: 10px;
   text-align: center;
 }
-
 @media screen and (max-width: 650px) {
   aside .picture {
     display: none;
   }
 }
-
 aside .picture img {
   width: 150px;
   height: auto;
   border-radius: 50%;
   border: 3px solid #ff9777;
 }
-
 aside .picture,
 aside .adress-content,
 aside .about-content,
 aside .hobbis-content {
   padding: 10px 40px;
 }
-
 aside .info {
   margin-top: 10px;
   font-style: italic;
   font-weight: 500;
 }
-
 @media screen and (max-width: 650px) {
   aside .adress-content {
     text-align: center;
   }
 }
-
 aside .hobbis-content {
   display: flex;
   flex-direction: row;
@@ -176,42 +156,35 @@ main {
   padding: 40px;
   background-color: #fff;
 }
-
 @media screen and (max-width: 650px) {
   main {
     width: 100%;
     position: relative;
   }
 }
-
 main h1 {
   margin: 0;
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 500;
 }
-
 @media screen and (max-width: 650px) {
   main h1 {
     font-size: 20px;
   }
 }
-
 main h1 mark {
   color: #FFAB91;
   background-color: transparent;
 }
-
 main #job-title {
   margin: 0;
   font-size: 15px;
   font-weight: 600;
 }
-
 main hr {
   border: 1px solid #FFAB91;
 }
-
 main #hr-title {
   width: 50px;
   display: inline-block;
@@ -219,20 +192,17 @@ main #hr-title {
   padding: 0;
   text-align: left;
 }
-
 @media screen and (max-width: 650px) {
   main #hr-title {
     margin-bottom: 30px;
   }
 }
-
 main .main-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-
 @media screen and (max-width: 650px) {
   main .main-title {
     display: flex;
@@ -241,51 +211,43 @@ main .main-title {
     align-items: center;
   }
 }
-
 main .main-title i {
   margin: 0 0 0 5px;
   font-size: 25px;
   color: #FFAB91;
 }
-
 @media screen and (max-width: 650px) {
   main .main-title i {
     margin: auto;
   }
 }
-
 main .main-title h2 {
   margin: 0 0 0 20px;
   text-transform: uppercase;
   font-weight: 400;
 }
-
 @media screen and (max-width: 650px) {
   main .main-title h2 {
     margin: 5px 0 0 0;
     font-size: 15px;
   }
 }
-
 main .responsive-picture {
   display: none;
   margin-bottom: 30px;
   text-align: center;
 }
-
 @media screen and (max-width: 650px) {
   main .responsive-picture {
     display: block;
   }
 }
-
 main .responsive-picture img {
   width: 150px;
   height: auto;
   border-radius: 50%;
   border: 3px solid #ff9777;
 }
-
 main .diploma,
 main .experience {
   display: flex;
@@ -294,76 +256,61 @@ main .experience {
   align-items: flex-start;
   margin: 20px 0 20px 0;
 }
-
 main .diploma h3,
 main .experience h3 {
   margin: 0;
   text-transform: uppercase;
   font-weight: 500;
 }
-
 main .diploma i,
 main .experience i {
   margin: 10px 20px 0 20px;
   font-size: 10px;
   color: #FFAB91;
 }
-
 main .diploma-content,
 main .experience-content {
   margin-left: 10px;
 }
-
 main .diploma-content p,
 main .experience-content p {
   margin-top: 0;
 }
-
 main .diploma-dates,
 main .experience-dates {
   margin-bottom: 20px;
 }
-
 @media screen and (max-width: 650px) {
-
   main .diploma-dates,
-  main .experience-dates {
+main .experience-dates {
     padding-top: 10px;
   }
 }
-
 main .diploma-dates p,
 main .experience-dates p {
   margin: 0 50px 0px 0;
 }
-
 @media screen and (max-width: 650px) {
-
   main .diploma-dates p,
-  main .experience-dates p {
+main .experience-dates p {
     margin: auto;
   }
 }
-
-main .diploma-school,
-main .diploma-firm,
+main .diploma-school, main .diploma-firm,
 main .experience-school,
 main .experience-firm {
   margin: 0 0 5px 0;
   font-style: italic;
 }
-
 @media screen and (max-width: 650px) {
-
   main .diploma,
-  main .experience {
+main .experience {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
 }
-
 main .reference {
   display: flex;
   flex-direction: row;
@@ -371,20 +318,16 @@ main .reference {
   align-items: flex-start;
   text-align: center;
 }
-
 main .reference p:not(:first-child) {
   margin: 0;
 }
-
 main .reference-name {
   text-transform: uppercase;
   font-weight: 600;
 }
-
 main .reference-firm {
   font-style: italic;
 }
-
 @media (min-width: 650px) and (max-width: 850px) {
   main .reference {
     display: flex;
@@ -393,7 +336,6 @@ main .reference-firm {
     align-items: center;
   }
 }
-
 @media screen and (max-width: 550px) {
   main .reference {
     display: flex;
