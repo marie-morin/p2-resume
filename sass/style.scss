@@ -304,6 +304,14 @@ main {
             }
         }
 
+        &-info {
+            @include flexCenter(flex-start, row, flex-start);
+
+            @media screen and (max-width: $small) {
+                @include flexCenter(center, column, center);
+            }
+        }
+
         &-dates {
             margin-bottom: 20px;
 
@@ -326,8 +334,12 @@ main {
             font-style: italic;
         }
 
+        @media screen and (max-width: 850px) {
+            @include flexCenter(flex-start, column, flex-start);
+        }
+
         @media screen and (max-width: $small) {
-            @include flexCenter(flex-start, column, center);
+            @include flexCenter(center, column, center);
         }
     }
 

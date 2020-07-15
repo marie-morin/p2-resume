@@ -276,6 +276,22 @@ main .diploma-content p,
 main .experience-content p {
   margin-top: 0;
 }
+main .diploma-info,
+main .experience-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media screen and (max-width: 650px) {
+  main .diploma-info,
+main .experience-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 main .diploma-dates,
 main .experience-dates {
   margin-bottom: 20px;
@@ -302,12 +318,21 @@ main .experience-firm {
   margin: 0 0 5px 0;
   font-style: italic;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
   main .diploma,
 main .experience {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .diploma,
+main .experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
