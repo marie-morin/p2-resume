@@ -92,12 +92,13 @@ aside {
         width: 100%;
     }
 
-    h3 {
+    h2 {
         height: 30px;
         padding: 5px 0;
         text-align: center;
         text-transform: uppercase;
         font-weight: 400;
+        font-size: 16px;
         color: $primaryColor;
         background-color: $secondaryColor;
     }
@@ -121,7 +122,8 @@ aside {
     }
 
     .picture {
-        margin-top: 10px;
+        width: 100%;
+        margin: 10px 0 0 0;
         text-align: center;
 
         @media screen and (max-width: $small) {
@@ -141,6 +143,10 @@ aside {
     .about-content,
     .hobbis-content {
         padding: 10px 40px;
+    }
+
+    .adress-content__section {
+        list-style: none;
     }
 
     .info {
@@ -261,8 +267,9 @@ main {
 
     .responsive-picture {
         display: none;
-        margin-bottom: 30px;
+        margin: 0 0 30px 0;
         text-align: center;
+        width: 100%;
 
         @media screen and (max-width: $small) {
             display: block;
